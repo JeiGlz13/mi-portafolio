@@ -1,0 +1,77 @@
+.BannerWelcome{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .BannerImage{
+        filter: brightness(40%);
+        min-height: 20rem;
+        opacity: 60%;
+        position: relative;
+        width: 100%;
+        z-index: 0;
+
+        -drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+}
+
+.BannerMe{
+    width: 100%;
+    position: absolute;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .MyPhoto{
+        border-radius: 50%;
+        width: 18%;
+        border: 0.3rem solid #fff;
+        margin-top: 5%;
+    }
+    
+    h1{
+        margin-top: 3%;
+        color: $main-titles;
+        font-size: 2rem;
+    }
+
+    h2{
+        margin-top: 1%;
+        color: $main-subtitles;
+        font-size: 1.4rem;
+        margin-bottom: 3%;
+    }
+
+    strong{
+        color: $secondary-lightblue;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.7rem;
+        background-color: $secondary-lightblue;
+        text-decoration: none;
+        color: $main-titles;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: all ease-in-out 0.2s;
+
+        &:hover{
+            background-color: rgb(37 99 235);
+        }
+
+        i{
+            margin-left: 0.6rem;
+        }
+    }
+}
