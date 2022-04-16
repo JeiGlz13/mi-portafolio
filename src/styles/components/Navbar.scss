@@ -1,0 +1,74 @@
+.tabbed {
+  width: 80%;
+  margin: 4rem 0;
+  border-bottom: 0.45rem solid $secondary-lightblue;
+  overflow: hidden;
+  border-radius: 0.3rem;
+}
+.tabbed ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 3.5rem;
+}
+
+.navbar-item {
+  text-decoration: none;
+  padding: 0.6rem 1.5rem 0.7rem;
+  background-color: #FFF;
+  margin-right: 2.8rem;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+  color: #212121;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 250ms ease;
+}
+
+.active {
+  background-color: $secondary-lightblue;
+  color: white;
+}
+
+.tabbed ul .navbar-item:before,
+.tabbed ul .navbar-item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 3rem;
+  width: 2.3rem;  
+  background-color: #FFF;
+  transition: all 250ms ease;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.tabbed ul a:hover,
+.tabbed ul a:hover:before,
+.tabbed ul a:hover:after {
+  background-color: #F4F7F9;
+  color: #444;
+}
+
+.tabbed ul .active:hover,
+.tabbed ul .active:hover:before,
+.tabbed ul .active:hover:after {
+  background-color: $secondary-lightblue;
+  color: white;
+}
+
+.tabbed ul .active:before,
+.tabbed ul .active:after{
+  background-color: $secondary-lightblue;
+}
+
+.tabbed ul .navbar-item:before {
+  right: -1.5rem;
+  transform: skew(30deg, 0deg);
+  box-shadow: rgba(0,0,0,.1) 6px 5px 10px, inset rgba(206, 206, 206, 0.9) -2px 0;
+}
+.tabbed ul .navbar-item:after {
+  left: -1.5rem;;
+  transform: skew(-30deg, 0deg);
+  box-shadow: rgba(0,0,0,.1) -6px 5px 10px, inset rgba(206, 206, 206, 0.9) 2px 0;
+}
+

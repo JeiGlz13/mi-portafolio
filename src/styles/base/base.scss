@@ -11,6 +11,18 @@ html, body{
     color: $main-titles;
 }
 
+.Main-Container{
+  width: 100%;
+  margin-top: 12rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
 ::-webkit-scrollbar {
     width: 7px;
     transition: all 0.3s ease-out;

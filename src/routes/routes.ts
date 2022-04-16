@@ -18,8 +18,8 @@ export const routes = [
     },
     {
         id: 3,
-        path: '/actividades',
-        name: 'Actividades',
+        path: '/academico',
+        name: 'Academico',
         Component: ActividadesScreen,
     },
     {
