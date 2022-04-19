@@ -1,32 +1,34 @@
 import { ActividadesScreen } from "../components/screens/ActividadesScreen";
-import { ContactoScreen } from "../components/screens/ContactoScreen";
 import { HabilidadesScreen } from "../components/screens/HabilidadesScreen";
 import { ProyectosScreen } from "../components/screens/ProyectosScreen";
+import { ExperienciaScreen } from '../components/screens/ExperienciaScreen';
 
 export const routes = [
     {
         id: 1,
-        path: '/habilidades',
-        name: 'Habilidades',
-        Component: HabilidadesScreen,
+        path: '/experiencia',
+        name: 'Experiencia',
+        Component: ExperienciaScreen,
     },
     {
         id: 2,
-        path: '/proyectos',
-        name: 'Proyectos',
-        Component: ProyectosScreen,
-    },
-    {
-        id: 3,
         path: '/academico',
         name: 'Academico',
         Component: ActividadesScreen,
     },
     {
-        id: 4,
-        path: '/Contacto',
-        name: 'Contacto',
-        Component: ContactoScreen,
+        id: 3,
+        path: '/habilidades',
+        name: 'Habilidades',
+        Component: HabilidadesScreen,
     },
+    {
+        id: 4,
+        path: '/proyectos',
+        name: 'Proyectos',
+        Component: ProyectosScreen,
+    },
+    
+    
     
 ]

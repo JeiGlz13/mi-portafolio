@@ -1,0 +1,209 @@
+.HabilidadesScreen{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .BannerAbilities{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+
+        .AbilitiesTitles{
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            h1{
+                text-align: left;
+                font-size: 2.3rem;
+                font-weight: 800;
+                color: $main-titles;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            h2{
+                margin-top: 0.5rem;
+                text-align: left;
+                font-weight: 500;
+                font-size: 1.15rem;
+                color: $main-subtitles;
+            }
+        }
+
+        img{
+            width: 48%;
+        }
+    }
+
+    h1{
+        font-size: 2rem;
+        color: $main-titles;
+        margin-top: 5rem;
+    }
+
+    .AbilitiesCards{
+        width: 90%;
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .AbilityCard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 17rem;
+            padding: 1.2rem 1.8rem;
+            background-color: white;
+            border-radius: 1.4rem;
+            margin: 2rem 1rem;
+
+            i{
+                color: $secondary-blue;
+                font-size: 2.6rem;
+            }
+
+            h2{
+                color: $main-darkGray;
+                font-size: 1.15rem;
+                margin-top: 1rem;
+                text-align: left;
+            }
+
+            h3{
+                color: darken($color: $main-subtitles, $amount: 60);
+                text-align: left;
+                font-size: 0.9rem;
+                font-weight: 600;
+                margin-top: 0.2rem;
+            }
+        }
+    }
+
+    .TechCards{
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+
+        .TechCard, .TechCard-full{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 3rem;
+        }
+
+        .TechCard{
+            width: 48%;
+            
+            img{
+                width: 30%;
+            }
+        }
+
+        .TechCard-full{
+            width: 100%;
+           
+            img{
+                width: 15%;
+            }
+        }
+
+        .TechCardItems{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+
+            h1{
+                font-size: 1.7rem;
+                margin-bottom: 1rem;
+                text-align: left;
+                margin-top: 0;
+                margin-left: 2.5rem;
+            }
+
+            .ItemsContainer{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .TechCardItem{
+                    margin: 1rem 2rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    position: relative;
+    
+                    .TechImage{
+                        border-radius: 100%;
+                        display: flex;
+                        position: absolute;
+                        z-index: 40;
+                        justify-content: center;
+                        align-items: center;
+    
+                        img{
+                            width: 100%;
+                            background-color: white;
+                            border-radius: 100%;
+                            width: 5rem;
+                            height: 5rem;
+                            padding: 0.2rem;
+                            box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+                        }
+                    }
+    
+                    .TechInfo{
+                        display: flex;
+                        z-index: 20;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 14rem;
+                        background-color: $main-titles;
+                        margin-left: 3.5rem;
+                        border-radius: 1rem;
+                        padding: 0.3rem 0;
+                        padding-left: 2rem;
+                        padding-right: 0.5rem;
+    
+                        .TechName{
+                            h1{
+                                font-size: 1rem;
+                                color: $main-darkGray;
+                                margin: 0;
+                            }
+                        }
+                        
+    
+                        .TechPercent{
+                            width: 3.5rem;
+    
+                            text{
+                                font-size: 1.7rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+
+           
+        }
+    }
+}
