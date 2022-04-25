@@ -12,7 +12,6 @@ export const startReadingAbilities = () => {
 export const startReadingKnowledge = () => {
     return async (dispatch: any) => {
         const myKnowledge = await getFirebaseDocs('myKnowledge');
-        console.log(myKnowledge);
         const languages = myKnowledge.filter((knowledge: KnowledgeInterface) => knowledge.category === 'language');
         const databases = myKnowledge.filter((knowledge: KnowledgeInterface) => knowledge.category === 'database');
         const frameworks = myKnowledge.filter((knowledge: KnowledgeInterface) => knowledge.category === 'library');

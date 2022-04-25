@@ -12,3 +12,18 @@ export interface KnowledgeInterface{
     image: string;
     percent: number;
 }
+
+export interface ProjectsInterface{
+    id: string;
+    name: string;
+    descripcion: string;
+    github: string;
+    image: string;
+    url: string;
+    tech: TechType[];
+}
+
+type TechType = {
+    name: string;
+    img: string;
+}

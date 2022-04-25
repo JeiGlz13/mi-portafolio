@@ -19,6 +19,6 @@ export const TechCardItem = ({
                 <CircularProgressbar value={percent} text={`${percent}%`} />
             </div>
         </div>
-    </div>
+    </div> 
   )
 }

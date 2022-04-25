@@ -20,6 +20,7 @@ export const TechCard = ({
 
         <div className="TechCardItems">
             <h1>{name}</h1>
+            <hr/>
             <div className="ItemsContainer">
                 {
                     knowledge?.map((know:KnowledgeInterface) => (

@@ -3,11 +3,13 @@ import { Provider } from 'react-redux';
 import App from './App';
 
 import './styles/styles.scss'
-import { store } from './redux/store';
+import configureStore from './redux/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const store = configureStore();
 root.render(
   <Provider store={store} >
     <App />

@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-circular-progressbar": "^1.1.0"
+    "@types/react-circular-progressbar": "^1.1.0",
+    "redux-devtools-extension": "^2.13.9"
   }
 }

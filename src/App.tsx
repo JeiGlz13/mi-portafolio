@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { ContactoScreen } from './components/screens/ContactoScreen';
 import { BannerWelcome } from './components/ui/BannerWelcome';
 import { startReadingAbilities, startReadingKnowledge } from './redux/actions/abilitiesActions';
+import { startLoadingProjects } from './redux/actions/projectsActions';
 import { Navigations } from './routes/Navigations';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   useEffect(() => {
     dispatch(startReadingKnowledge());
     dispatch(startReadingAbilities());
+    dispatch(startLoadingProjects());
   }, [dispatch])
   return (
     <div className='PortafolioApp' >

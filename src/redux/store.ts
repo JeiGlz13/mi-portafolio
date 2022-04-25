@@ -1,9 +1,27 @@
-import { createStore,combineReducers , applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
 import {abilitiesReducer} from './reducers/abilitiesReducer';
 
+
+import thunkMiddleware from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import monitorReducersEnhancer from './enhancers/monitorReducers';
+import loggerMiddleware from './middleware/logger';
+import { projectsReducer } from './reducers/projectsReducer';
+
 const reducers = combineReducers({
-    abilities: abilitiesReducer
+    abilities: abilitiesReducer,
+    projects: projectsReducer
 })
 
-export const store = createStore(reducers, applyMiddleware(thunk))
+export default function configureStore(preloadedState?: any) {
+  const middlewares = [loggerMiddleware, thunkMiddleware]
+  const middlewareEnhancer = applyMiddleware(...middlewares)
+
+  const enhancers = [middlewareEnhancer, monitorReducersEnhancer]
+   // @ts-ignore
+  const composedEnhancers = composeWithDevTools(...enhancers)
+
+  const store = createStore(reducers, preloadedState, composedEnhancers)
+
+  return store
+}
